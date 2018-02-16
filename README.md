@@ -11,5 +11,57 @@ Simple asynchronous pub sub service implemented in .Net WCF.
   <li>Wpf Sample Application</li>
 </ul>
 <h1>Getting Started with the Pub Sub Service</h1>
+<ul>
+  <li><h3>To Publish:</h3>
+    
+    {        
+        var publisher = new PublisherBase();    
+        publisher.Publish("channel", "foo");
+    }
+    
+  </li>
+  <li><h3>To Subscribe:</h3>
+    
+    {
+        
+        var subscriber = new SubscriberBase(new string[] { "channel1", ... })
+        // if you want to subscribe to all channels, pass empty or null string array for channels to constructor.
+        {
+           Publish = (channel, publication) => { 
+              Console.WriteLine($"Listening on {Channel} to receive {publication}");              
+              }
+          },                                                      
+          //  syncContext = SynchronizationContext.Current, // uncomment if you want to set a synchronization context
+        }       
+                
+        // SubscriberBase.AsyncPublications = false; // uncomment if you want to handle all subscriptions synchronously
+        
+        // SubscriberBase.UseSyncContext = true; // uncomment if you want to use the synchronoization context 
+        
+    }
+    
+  </li>
+</ul>
+
 <h1>Nuget</h1>
 <h1>Quick Start Examples</h1>
+Download code from repository. 
+
+Open solution file. (Restore nuget packages)
+
+Build all.
+
+Open WcfPubSubConsoleServer bin\debug folder
+
+Run WcfPubSubConsoleServer.exe as administrator
+
+Open WcfSampleClient bin\debug folder
+
+Run TestPubSub.exe application.
+
+The sample client and server applications provide demonstration for the pub sub service.
+The sample application has a proxy class generated from the WCF service and configuration files. 
+All publications are serialized to string (JSON, XML) before publishing to the service.
+The sample application demonstrates two types of message publication, string and jpeg image. (And you can define any 
+data you want).
+
