@@ -45,7 +45,7 @@ Simple asynchronous pub sub service implemented in .Net WCF.
 
 <h1>Nuget</h1>
 <h1>Quick Start Examples</h1>
-1/ Download code from repository. 
+1. Download code from repository. 
 
 2. Open solution file. (Restore nuget packages)
 
