@@ -1,4 +1,4 @@
-# EasyWcfPubSub
+# Easy Wcf PubSub Service and Client
 A publisher subscriber service implemented in C#/WCF
 
 Simple asynchronous pub sub service implemented in .Net WCF.
@@ -45,19 +45,22 @@ Simple asynchronous pub sub service implemented in .Net WCF.
 
 <h1>Nuget</h1>
 <h1>Quick Start Examples</h1>
-Download code from repository. 
+1/ Download code from repository. 
 
-Open solution file. (Restore nuget packages)
+2. Open solution file. (Restore nuget packages)
 
-Build all.
+3. Build all.
 
-Open WcfPubSubConsoleServer bin\debug folder
+4. Open WcfPubSubConsoleServer bin\debug folder
 
-Run WcfPubSubConsoleServer.exe as administrator
+5. Run WcfPubSubConsoleServer.exe as administrator
 
-Open WcfSampleClient bin\debug folder
+6. Open WcfSampleClient bin\debug folder
 
-Run TestPubSub.exe application.
+7. Run TestPubSub.exe application.
+
+The console server should look like:
+
 
 The sample client and server applications provide demonstration for the pub sub service.
 The sample application has a proxy class generated from the WCF service and configuration files. 
