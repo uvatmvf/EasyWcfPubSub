@@ -62,9 +62,10 @@ Simple asynchronous pub sub service implemented in .Net WCF.
 The console server should look like:
 
 server:
-(https://github.com/uvatmvf/EasyWcfPubSub/blob/master/server.PNG)
+<img src="https://github.com/uvatmvf/EasyWcfPubSub/blob/master/server.PNG" />
+
 client:
-(https://github.com/uvatmvf/EasyWcfPubSub/blob/master/clientSample.png)
+<img src="https://github.com/uvatmvf/EasyWcfPubSub/blob/master/clientSample.png" />
 
 The sample client and server applications provide demonstration for the pub sub service.
 The sample application has a proxy class generated from the WCF service and configuration files. 
