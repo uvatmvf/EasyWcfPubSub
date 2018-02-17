@@ -23,8 +23,8 @@ namespace WcfPubSubConsoleServer
             var svc = new PubSubService();
             svc.Start();
             Console.WriteLine("Running pub sub service in console.");
-            Console.WriteLine($" >> Publish {(PubSubService2.Properties.Settings.Default.PublishAsync ? "asynchronously" : "synchronously" )}.");
-            Console.WriteLine($" >> Print publication(s) to console{(PubSubService2.Properties.Settings.Default.WritePublicationsToConsole ? "." : " is suppressed.")}");
+            Console.WriteLine($" >> Publish {(PubSubService2.Properties.Settings.Default.PublishAsync ? "asynchronously.  (use -s on console to publish synchronously)" : "synchronously" )}.");
+            Console.WriteLine($" >> Print publication(s) to console{(PubSubService2.Properties.Settings.Default.WritePublicationsToConsole ? "." : " is suppressed. (use '-p' on console to print.)")}");
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
             svc.Stop();
