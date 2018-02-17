@@ -55,6 +55,11 @@ The publisher and subscribers are free to serialize objects through the pipe wit
 </ul>
 
 <h1>Nuget</h1>
+
+Install-Package Easy.Wcf.PubSub.Client -Version 1.0.0
+
+Install-Package Easy.Wcf.PubSub.Server -Version 1.0.0
+
 <h1>Quick Start Examples</h1>
 1. Download code from repository. 
 
@@ -83,12 +88,4 @@ The sample application has a proxy class generated from the WCF service and conf
 All publications are serialized to string (JSON, XML) before publishing to the service.
 The sample application demonstrates two types of message publication, string and jpeg image. (And you can define any 
 data you want).
-
-<h1>Configuration</h1>
-
-WCF configuration samples are in repo.
-
-(client)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/SampleClient/App.config]
-
-(server)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/PubSubHub/App.config]
 
