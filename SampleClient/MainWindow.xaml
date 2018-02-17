@@ -77,10 +77,10 @@
                         <Style TargetType="ToggleButton">
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding PublishImages}" Value="True">
-                                    <Setter Property="Content" Value="Publish Text" />
+                                    <Setter Property="Content" Value="Text" />
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding PublishImages}" Value="False">
-                                    <Setter Property="Content" Value="Publish Images" />
+                                    <Setter Property="Content" Value="Image" />
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
