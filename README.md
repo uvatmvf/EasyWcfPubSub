@@ -84,3 +84,11 @@ All publications are serialized to string (JSON, XML) before publishing to the s
 The sample application demonstrates two types of message publication, string and jpeg image. (And you can define any 
 data you want).
 
+<h1>Configuration</h1>
+
+WCF configuration samples are in repo.
+
+(client)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/SampleClient/App.config]
+
+(server)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/PubSubHub/App.config]
+
