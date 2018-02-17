@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Easy.Wcf.PubSub.Server</id>
+    <title>Easy.Wcf.PubSub.Server</title>
+    <version>1.0.0</version>
+    <authors>
+      McCarthy, Justin
+    </authors>
+    <owners>McCarthy, Justin</owners>
+    <licenseUrl>https://github.com/uvatmvf/EasyWcfPubSub/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/uvatmvf/EasyWcfPubSub/tree/master/PubSubHub</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/uvatmvf/EasyWcfPubSub/blob/master/wifi.png</iconUrl>
+    <description>Easy WCF Publisher Subscriber Service Implementation</description>
+    <releaseNotes>Initial Releaes</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>C# PubSub Wcf</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="content\**" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <!-- Include everything in \build -->
+    <file src="bin\**" target="build" />
+    <!-- Other files -->
+    <!-- ... -->
+  </files>
+</package>

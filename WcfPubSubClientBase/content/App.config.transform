@@ -1,0 +1,30 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <netTcpBinding>
+        <binding name="NetTcpBinding_IPubSubService"/>
+      </netTcpBinding>
+      <netNamedPipeBinding>
+        <binding name="NamedPipeBinding_IPubSubService" />
+      </netNamedPipeBinding>
+    </bindings>
+    <client>
+      <endpoint address="net.pipe://localhost/PubSubServicePipe"
+                binding="netNamedPipeBinding"
+                bindingConfiguration="NamedPipeBinding_IPubSubService"
+                contract="IPubSubService"
+                name="PipeEndpoint_IPubSubService">        
+      </endpoint>
+    </client>
+  </system.serviceModel>
+  <userSettings>
+    <TestPubSub.Properties.Settings>
+      <setting name="SubscribeAsynchronously" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="SynchronizeOnUiThread" serializeAs="String">
+        <value>False</value>
+      </setting>
+    </TestPubSub.Properties.Settings>
+  </userSettings>
+</configuration>
