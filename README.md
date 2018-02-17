@@ -2,7 +2,18 @@
 A publisher subscriber service implemented in C#/WCF
 
 Simple asynchronous pub sub service implemented in .Net WCF.
+<h1>Why?</h1>
+Many pub-sub implementations couple publishers and subscribers using a static event callback. This can cause delays when serving publications to slow clients. These do not scale, and fail on intermittency or clients that take a long time to process/accept the subscription.
 
+This implementation decouples publishers and subscribers into asynchronous, fire and forget callbacks.
+
+Most pub-sub implementations are library implementations.
+
+This implementation publishes through a WCF service, using a generic interface. 
+
+Most wcf services require the clients to adopt the typed library of the service contract.
+
+The publisher and subscribers are free to serialize objects through the pipe with no changes to the data contract by allowing them to serialize to JSON/Xml/whatever before serializing publish and deserializing after subscription is received.
 <h1>At a glance</h1>
 <ul>
 <li>Wcf Pub Sub Service</li>
@@ -72,4 +83,12 @@ The sample application has a proxy class generated from the WCF service and conf
 All publications are serialized to string (JSON, XML) before publishing to the service.
 The sample application demonstrates two types of message publication, string and jpeg image. (And you can define any 
 data you want).
+
+<h1>Configuration</h1>
+
+WCF configuration samples are in repo.
+
+(client)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/SampleClient/App.config]
+
+(server)[https://github.com/uvatmvf/EasyWcfPubSub/blob/master/PubSubHub/App.config]
 
