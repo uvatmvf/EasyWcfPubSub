@@ -3,6 +3,7 @@ A publisher subscriber service implemented in C#/WCF
 
 Simple asynchronous pub sub service implemented in .Net WCF.
 <h1>Why?</h1>
+<h2>NOTE: WCF is deprecated. Use gRPC instead.</h2> 
 Many pub-sub implementations couple publishers and subscribers using a static event callback. This can cause delays when serving publications to slow clients. These do not scale, and fail on intermittency or clients that take a long time to process/accept the subscription.
 
 This implementation decouples publishers and subscribers into asynchronous, fire and forget callbacks.
@@ -89,3 +90,4 @@ All publications are serialized to string (JSON, XML) before publishing to the s
 The sample application demonstrates two types of message publication, string and jpeg image. (And you can define any 
 data you want).
 
+TODO: Reimplement POC in gRPC repo.
